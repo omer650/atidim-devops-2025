@@ -7,6 +7,9 @@ jobs:
     steps:
       - name: Clone down repository
         uses: actions/checkout@v2
+      
       - name: Build application
         working-directory: 02-git-github/exercises/github-actions-katas
-        run: ci/build-app.sh
+        run: |
+          chmod +x ci/build-app.sh
+          ci/build-app.sh
